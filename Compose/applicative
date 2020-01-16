@@ -1,4 +1,4 @@
-    let Applicative = ./../Applicative/Type
+let Applicative = ../Applicative/Type
 
 in    λ(f : Type → Type)
     → λ(g : Type → Type)
@@ -14,13 +14,13 @@ in    λ(f : Type → Type)
               → λ(b : Type)
               → λ(k : ./Type f g (a → b))
               → fApplicative.ap
-                (g a)
-                (g b)
-                ( fApplicative.map
-                  (g (a → b))
-                  (g a → g b)
-                  (gApplicative.ap a b)
-                  k
-                )
+                  (g a)
+                  (g b)
+                  ( fApplicative.map
+                      (g (a → b))
+                      (g a → g b)
+                      (gApplicative.ap a b)
+                      k
+                  )
           }
       : Applicative (./Type f g)

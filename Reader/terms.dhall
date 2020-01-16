@@ -1,4 +1,4 @@
-    let Reader = ./Type
+let Reader = ./Type
 
 in    λ(r : Type)
     →   { withReader =

@@ -1,4 +1,4 @@
-    let Monad = ./../Monad/Type
+let Monad = ../Monad/Type
 
 in    λ(s : Type)
     → λ(m : Type → Type)

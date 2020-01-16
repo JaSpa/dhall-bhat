@@ -1,5 +1,4 @@
-    { arr =
-        λ(a : Type) → λ(b : Type) → (./category).identity (a → b)
+    { arr = λ(a : Type) → λ(b : Type) → (./category).identity (a → b)
     , split =
           λ(a : Type)
         → λ(b : Type)
@@ -20,4 +19,4 @@
     }
   ∧ ./category
   ∧ ./strong
-: ./../Arrow/Type ./Type
+: ../Arrow/Type ./Type

@@ -1,10 +1,10 @@
-    let Monad = ./../Monad/Type
+let Monad = ../Monad/Type
 
-in  let Applicative = ./../Applicative/Type
+let Applicative = ../Applicative/Type
 
-in  let extractFunctor = ./../Monad/extractFunctor
+let extractFunctor = ../Monad/extractFunctor
 
-in  let StateT = ./Type
+let StateT = ./Type
 
 in    λ(s : Type)
     → λ(m : Type → Type)
@@ -16,23 +16,25 @@ in    λ(s : Type)
               → λ(g : StateT s m (a → b))
               → λ(fa : StateT s m a)
               → λ(new : s)
-              →     let fk = g new
-                
+              → let fk = g new
+
                 in  monad.bind
-                    { val : a → b, state : s }
-                    { val : b, state : s }
-                    fk
-                    (   λ(k : { val : a → b, state : s })
-                      →     let res = fa k.state
-                        
-                        in  monad.map
-                            { val : a, state : s }
-                            { val : b, state : s }
-                            (   λ(final : { val : a, state : s })
-                              → { val = k.val final.val, state = final.state }
-                            )
-                            res
-                    )
+                      { val : a → b, state : s }
+                      { val : b, state : s }
+                      fk
+                      (   λ(k : { val : a → b, state : s })
+                        → let res = fa k.state
+
+                          in  monad.map
+                                { val : a, state : s }
+                                { val : b, state : s }
+                                (   λ(final : { val : a, state : s })
+                                  → { val = k.val final.val
+                                    , state = final.state
+                                    }
+                                )
+                                res
+                      )
           , pure =
                 λ(a : Type)
               → λ(x : a)

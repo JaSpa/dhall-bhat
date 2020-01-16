@@ -1,6 +1,6 @@
-    let Functor = ./../Functor/Type
+let Functor = ../Functor/Type
 
-in  let StateT = ./Type
+let StateT = ./Type
 
 in    λ(s : Type)
     → λ(m : Type → Type)
@@ -12,11 +12,11 @@ in    λ(s : Type)
             → λ(fa : StateT s m a)
             → λ(new : s)
             → functor.map
-              { val : a, state : s }
-              { val : b, state : s }
-              (   λ(res : { val : a, state : s })
-                → { val = f res.val, state = res.state }
-              )
-              (fa new)
+                { val : a, state : s }
+                { val : b, state : s }
+                (   λ(res : { val : a, state : s })
+                  → { val = f res.val, state = res.state }
+                )
+                (fa new)
         }
       : Functor (StateT s m)

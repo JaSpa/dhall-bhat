@@ -9,4 +9,4 @@
         → λ(k : b → f c)
         → ran c (λ(x : a) → k (h x))
     }
-  : ./../Functor/Type (./Type f g)
+  : ../Functor/Type (./Type f g)

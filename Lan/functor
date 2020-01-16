@@ -9,4 +9,4 @@
         → λ(k : ∀(c : Type) → (f c → b) → g c → r)
         → lan r (λ(c : Type) → λ(x : f c → a) → k c (λ(y : f c) → h (x y)))
     }
-  : ./../Functor/Type (./Type f g)
+  : ../Functor/Type (./Type f g)

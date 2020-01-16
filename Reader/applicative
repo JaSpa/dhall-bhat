@@ -1,11 +1,10 @@
-    let Reader = ./Type
+let Reader = ./Type
 
-in  let Applicative = ./../Applicative/Type
+let Applicative = ../Applicative/Type
 
 in    λ(r : Type)
     →     ./functor r
-        ∧ { pure =
-              λ(a : Type) → λ(x : a) → λ(env : r) → x
+        ∧ { pure = λ(a : Type) → λ(x : a) → λ(env : r) → x
           , ap =
                 λ(a : Type)
               → λ(b : Type)

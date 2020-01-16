@@ -7,19 +7,17 @@
         → λ(k : a → b)
         → λ(fa : f a)
         → bind a b fa (λ(x : a) → pure b (k x))
-    , pure =
-        pure
+    , pure = pure
     , ap =
           λ(a : Type)
         → λ(b : Type)
         → λ(k : f (a → b))
         → λ(fa : f a)
         → bind
-          (a → b)
-          b
-          k
-          (λ(g : a → b) → bind a b fa (λ(x : a) → pure b (g x)))
-    , bind =
-        bind
+            (a → b)
+            b
+            k
+            (λ(g : a → b) → bind a b fa (λ(x : a) → pure b (g x)))
+    , bind = bind
     }
   : ./Type f

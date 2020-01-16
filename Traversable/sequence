@@ -1,7 +1,6 @@
+let Applicative = ../Applicative/Type
 
-    let Applicative = ./../Applicative/Type
-
-in  let Traversable = ./../Traversable/Type
+let Traversable = ../Traversable/Type
 
 in    λ(t : Type → Type)
     → λ(traversable : Traversable t)

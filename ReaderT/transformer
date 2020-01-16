@@ -1,8 +1,8 @@
-    let Transformer = ./../Transformer/Type
+let Transformer = ../Transformer/Type
 
-in  let Monad = ./../Monad/Type
+let Monad = ../Monad/Type
 
-in  let ReaderT = ./Type
+let ReaderT = ./Type
 
 in    λ(r : Type)
     →   { lift =

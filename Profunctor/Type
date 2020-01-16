@@ -8,8 +8,6 @@
       → (c → d)
       → f b c
       → f a d
-  , lmap :
-      ∀(a : Type) → ∀(b : Type) → ∀(c : Type) → (a → b) → f b c → f a c
-  , rmap :
-      ∀(a : Type) → ∀(b : Type) → ∀(c : Type) → (b → c) → f a b → f a c
+  , lmap : ∀(a : Type) → ∀(b : Type) → ∀(c : Type) → (a → b) → f b c → f a c
+  , rmap : ∀(a : Type) → ∀(b : Type) → ∀(c : Type) → (b → c) → f a b → f a c
   }

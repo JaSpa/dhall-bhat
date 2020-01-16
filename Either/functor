@@ -1,6 +1,6 @@
-    let Functor = ./../Functor/Type
+let Functor = ../Functor/Type
 
-in  let Either = ./Type
+let Either = ./Type
 
 in    λ(a : Type)
     →   { map =

@@ -1,4 +1,4 @@
-    let Functor = ./../Functor/Type
+let Functor = ../Functor/Type
 
 in    { map =
             λ(a : Type)
@@ -6,10 +6,10 @@ in    { map =
           → λ(g : a → b)
           → λ(list : List a)
           → List/fold
-            a
-            list
-            (List b)
-            (λ(x : a) → λ(xs : List b) → [ g x ] # xs)
-            ([] : List b)
+              a
+              list
+              (List b)
+              (λ(x : a) → λ(xs : List b) → [ g x ] # xs)
+              ([] : List b)
       }
     : Functor List

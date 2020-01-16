@@ -1,5 +1,5 @@
   λ(h : Type → Type)
-→ λ(functor : ./../Functor/Type h)
+→ λ(functor : ../Functor/Type h)
 → λ(f : Type → Type)
 → λ(g : Type → Type)
 → λ(join : ∀(b : Type) → h (f b) → g b)

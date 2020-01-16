@@ -1,6 +1,6 @@
-    let Traversable = ./../Traversable/Type
+let Traversable = ../Traversable/Type
 
-in  let Applicative = ./../Applicative/Type
+let Applicative = ../Applicative/Type
 
 in    λ(f : Type → Type)
     → λ(g : Type → Type)
@@ -15,10 +15,10 @@ in    λ(f : Type → Type)
               → λ(b : Type)
               → λ(k : a → fA b)
               → fTraversable.traverse
-                fA
-                applicative
-                (g a)
-                (g b)
-                (gTraversable.traverse fA applicative a b k)
+                  fA
+                  applicative
+                  (g a)
+                  (g b)
+                  (gTraversable.traverse fA applicative a b k)
           }
       : Traversable (./Type f g)

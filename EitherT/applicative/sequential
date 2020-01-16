@@ -1,12 +1,12 @@
-    let Applicative = ./../../Applicative/Type
+let Applicative = ../../Applicative/Type
 
-in  let Either = ./../../Either/Type
+let Either = ../../Either/Type
 
-in  let EitherT = ./../Type
+let EitherT = ../Type
 
-in  let EitherA = ./../../Either/applicative/sequential
+let EitherA = ../../Either/applicative/sequential
 
-in  let ComposeA = ./../../Compose/applicative
+let ComposeA = ../../Compose/applicative
 
 in    λ(a : Type)
     → λ(m : Type → Type)

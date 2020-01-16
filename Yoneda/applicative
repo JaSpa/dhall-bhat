@@ -1,4 +1,4 @@
-    let Applicative = ./../Applicative/Type
+let Applicative = ../Applicative/Type
 
 in    λ(f : Type → Type)
     → λ(applicative : Applicative f)
@@ -17,9 +17,9 @@ in    λ(f : Type → Type)
               → λ(c : Type)
               → λ(k : b → c)
               → applicative.ap
-                a
-                c
-                (m (a → c) (λ(l : a → b) → λ(y : a) → k (l y)))
-                (./lower f a n)
+                  a
+                  c
+                  (m (a → c) (λ(l : a → b) → λ(y : a) → k (l y)))
+                  (./lower f a n)
           }
       : Applicative (./Type f)

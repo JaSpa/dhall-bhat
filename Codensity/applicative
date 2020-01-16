@@ -1,7 +1,6 @@
   λ(m : Type → Type)
 →     ./functor m
-    ∧ { pure =
-          λ(a : Type) → λ(x : a) → λ(b : Type) → λ(k : a → m b) → k x
+    ∧ { pure = λ(a : Type) → λ(x : a) → λ(b : Type) → λ(k : a → m b) → k x
       , ap =
             λ(a : Type)
           → λ(b : Type)
@@ -11,4 +10,4 @@
           → λ(k : b → m c)
           → f c (λ(h : a → b) → g c (λ(x : a) → k (h x)))
       }
-  : ./../Applicative/Type (./Type m)
+  : ../Applicative/Type (./Type m)

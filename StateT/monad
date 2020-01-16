@@ -1,6 +1,6 @@
-    let Monad = ./../Monad/Type
+let Monad = ../Monad/Type
 
-in  let StateT = ./Type
+let StateT = ./Type
 
 in    λ(s : Type)
     → λ(m : Type → Type)
@@ -13,9 +13,9 @@ in    λ(s : Type)
               → λ(k : a → StateT s m b)
               → λ(new : s)
               → monad.bind
-                { val : a, state : s }
-                { val : b, state : s }
-                (fa new)
-                (λ(res : { val : a, state : s }) → k res.val res.state)
+                  { val : a, state : s }
+                  { val : b, state : s }
+                  (fa new)
+                  (λ(res : { val : a, state : s }) → k res.val res.state)
           }
       : Monad (StateT s m)

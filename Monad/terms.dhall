@@ -1,4 +1,4 @@
-    let Monad = ./Type
+let Monad = ./Type
 
 in    λ(f : Type → Type)
     → λ(monad : Monad f)
@@ -20,8 +20,7 @@ in    λ(f : Type → Type)
           → λ(g : a → b)
           → λ(fa : f a)
           → monad.map a b g fa
-      , pure =
-          λ(a : Type) → monad.pure a
+      , pure = λ(a : Type) → monad.pure a
       , join =
             λ(a : Type)
           → λ(ffa : f (f a))

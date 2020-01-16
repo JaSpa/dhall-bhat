@@ -9,18 +9,17 @@
       → f b c
       → f a d
     )
-→   { dimap =
-        dimap
+→   { dimap = dimap
     , lmap =
           λ(a : Type)
         → λ(b : Type)
         → λ(c : Type)
         → λ(fn : a → b)
-        → dimap a b c c fn ((./../Function/category).identity c)
+        → dimap a b c c fn ((../Function/category).identity c)
     , rmap =
           λ(a : Type)
         → λ(b : Type)
         → λ(c : Type)
-        → dimap a a b c ((./../Function/category).identity a)
+        → dimap a a b c ((../Function/category).identity a)
     }
   : ./Type f

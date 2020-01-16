@@ -1,4 +1,4 @@
-    let Foldable = ./../Foldable/Type
+let Foldable = ../Foldable/Type
 
 in    λ(f : Type → Type)
     → λ(g : Type → Type)
@@ -10,9 +10,9 @@ in    λ(f : Type → Type)
             → λ(b : Type)
             → λ(k : a → b → b)
             → fFoldable.fold
-              (g a)
-              compose
-              b
-              (λ(ga : g a) → gFoldable.fold a ga b k)
+                (g a)
+                compose
+                b
+                (λ(ga : g a) → gFoldable.fold a ga b k)
         }
       : Foldable (./Type f g)

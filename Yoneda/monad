@@ -1,8 +1,8 @@
-    let Monad = ./../Monad/Type
+let Monad = ../Monad/Type
 
 in    λ(f : Type → Type)
     → λ(monad : Monad f)
-    →     ./applicative f (./../Monad/extractApplicative f monad)
+    →     ./applicative f (../Monad/extractApplicative f monad)
         ∧ { bind =
                 λ(a : Type)
               → λ(b : Type)
